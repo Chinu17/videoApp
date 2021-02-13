@@ -1,0 +1,44 @@
+<div fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="header">
+        <div fxFlex="15" fxLayoutAlign="space-around center">
+            <button mat-icon-button aria-label="menu icon" class="menu-iconn" (click)="onSelect()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <a>
+                <img src="/assets/img/logo.png" alt="YouTube Logo" class="youtube-logo" />
+            </a>
+        </div>
+        <div fxFlex="50" fxLayoutAlign="end center">
+            <form #searchFields fxLayout="row" fxHide.xs fxFill class="search-form">
+                <input *ngIf="searchFields.style.display !== 'none'" type="search" placeholder="Search" aria-label="Search" class="search-bar"/>
+            </form>
+            <button aria-label="Search icon" class="search-btn" (click)="searchItems(searchFields.style.display)" >
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+        <div fxFlex="20" fxLayout="row" fxLayoutAlign="space-around center">
+            <div class="create" fxHide.xs>
+                <app-create></app-create>
+            </div>
+            <div class="all-app" fxHide.xs>
+                <app-all-app></app-all-app>
+            </div>
+            <div class="notifications" fxHide.xs>
+                <app-notification></app-notification>
+            </div>
+            <div class="signup">
+                <app-signup></app-signup>
+            </div>
+        </div>
+    </div>
+    <div fxLayout="row" *ngIf="searchFields.style.display === 'none' && showSearchPane">
+        <div id="searchPane" fxLayout="row" fxLayoutAlign="center center">
+            <form class="search-bar">
+                <input class="search-input" type="search" placeholder="Search" aria-label="Search" />
+            </form>
+            <button mat-button aria-label="Search icon" class="search-btn" (click)="doSearch()">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

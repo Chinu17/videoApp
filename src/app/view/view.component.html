@@ -1,0 +1,125 @@
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<app-test></app-test>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false" *ngIf="!loadedFeature">
+    <mat-nav-list class="sidenav-first">
+      <a mat-list-item routerLink="/home" class="sideiconDeactive" (click)="onHome()">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon" [style.color]=" homeStatus ? 'red': 'black'">home</mat-icon>
+        Home
+      </a>
+      <a mat-list-item routerLink="/trending" class="sideiconDeactive" (click)="onTrending()">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon" [style.color]=" trendingStatus ? 'red': 'black'">local_fire_department
+        </mat-icon>
+        Trending
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive" (click)="onSubcription()">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon" [style.color]=" subcriptionStatus ? 'red': 'black'">subscriptions</mat-icon>
+        Subcriptions
+      </a>
+      <hr>
+      <a mat-list-item routerLink="/library" class="sideiconDeactive" (click)="onLibrary()">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon" [style.color]=" libraryStatus ? 'red': 'black'">video_library</mat-icon>
+        Library
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">history</mat-icon>
+        History
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">slideshow</mat-icon>
+        Your Videos
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">watch_later</mat-icon>
+        Watch Later
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">thumb_up</mat-icon>
+        Liked Videos
+      </a>
+      <h4 class="side-header">SUBCRIPTIONS</h4>
+      <a mat-list-item class="Subscribed-channel">
+        <img src="http://unsplash.it/36/36?gravity=center" alt="Your Channel" class="menu-channel-icon">
+        Subscribed Channel Name
+      </a>
+      <a mat-list-item class="Subscribed-channel">
+        <img src="http://unsplash.it/36/36?gravity=center" alt="Your Channel" class="menu-channel-icon">
+        Subscribed Channel Name
+      </a>
+      <a mat-list-item class="Subscribed-channel">
+        <img src="http://unsplash.it/36/36?gravity=center" alt="Your Channel" class="menu-channel-icon">
+        Subscribed Channel Name
+      </a>
+      <hr>
+      <h4 class="side-header">MORE FROM YOUTUBE</h4>
+      <a mat-list-item routerLink="/home" class="sideiconActive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">smart_display</mat-icon>
+        YouTube Premium
+      </a>
+      <a mat-list-item routerLink="/trending" class="sideiconDeactive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">theaters</mat-icon>
+        Movies
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">sports_esports</mat-icon>
+        Gaming
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">sensors</mat-icon>
+        Live
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">checkroom</mat-icon>
+        Fashion & Beauty
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">emoji_objects</mat-icon>
+        Learning
+      </a>
+      <hr>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">settings</mat-icon>
+        Settings
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">thumb_up</mat-icon>
+        Report History
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">contact_support</mat-icon>
+        Help
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon">sms_failed</mat-icon>
+        Send Feedback
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav class="sidenav-second" *ngIf="loadedFeature" opened mode="side" fxHide.xs>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home" class="sideiconActive" (click)="onHome()">
+        <mat-icon class="iconActive" aria-hidden="false" aria-label="Example of home icon" [style.color]=" homeStatus ? 'red': 'black'">home</mat-icon>
+      </a>
+      <a mat-list-item routerLink="/trending" class="sideiconDeactive" (click)="onTrending()">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon" [style.color]=" trendingStatus ? 'red': 'black'">local_fire_department
+        </mat-icon>
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive" (click)="onSubcription()">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon" [style.color]=" subcriptionStatus ? 'red': 'black'">subscriptions</mat-icon>
+      </a>
+      <a mat-list-item routerLink="/subcriptions" class="sideiconDeactive" (click)="onLibrary()">
+        <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon" [style.color]=" libraryStatus ? 'red': 'black'">video_library</mat-icon>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

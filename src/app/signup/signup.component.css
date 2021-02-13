@@ -1,0 +1,21 @@
+.menuSignUp{
+    width: 250px;
+}
+.signUpIcon{
+    margin-left: 15px;
+}
+.signUpName{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.signUpEmailAddress{
+    margin-left: 20px;
+}
+
+.menu-channel-icon{
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-color: #aaa;
+  }

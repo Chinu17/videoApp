@@ -1,0 +1,82 @@
+<div class="categories">
+    <section class="category-section" fxLayout="row" fxLayoutAlign="space-between center">
+        <button mat-button class="category active">All</button>
+        <button mat-button class="category">Category 1</button>
+        <button mat-button class="category">Category 2</button>
+        <button mat-button class="category">Category 3</button>
+        <button mat-button class="category">Category 4</button>
+        <button mat-button class="category">Category 5</button>
+        <button mat-button class="category">Category 6</button>
+        <button mat-button class="category">Category 7</button>
+        <button mat-button class="category">Category 8</button>
+    </section>
+</div>
+<mat-grid-list [cols]="breakpoint"  fxLayoutGap="5px" fxLayout="row" fxLayoutAlign="space-around stretch" class="video-section" (window:resize)="onResize($event)">
+    <mat-grid-tile *ngFor="let video of videos" fxLayoutGap="5px" gdAlignRows="start stretch">
+        <article  class="video-container">
+            <a class="thumbnail" data-duration="33:12">
+                <img class="thumbnail-image" src={{video.thumbnail}} />
+            </a>
+            <div class="video-bottom-section">
+                <a>
+                    <img class="channel-icon"  src={{video.channelIcon}} />
+                </a>
+                <div class="video-details">
+                    <a class="video-title">{{video.title}}</a>
+                    <a class="video-channel-name">{{video.channelName}}</a>
+                    <div class="video-metadata">
+                        <span>{{video.views}}</span>
+                        •
+                        <span>{{video.publishedDate}}</span>
+                    </div>
+                </div>
+            </div>
+        </article> 
+    </mat-grid-tile>  
+  </mat-grid-list>
+  <mat-grid-list [cols]="breakpoint"  fxLayoutGap="5px" fxLayout="row" fxLayoutAlign="space-around stretch" class="video-section" (window:resize)="onResize($event)">
+    <mat-grid-tile *ngFor="let video of videos" fxLayoutGap="5px" gdAlignRows="start stretch">
+        <article  class="video-container">
+            <a class="thumbnail" data-duration="33:12">
+                <img class="thumbnail-image" src={{video.thumbnail}} />
+            </a>
+            <div class="video-bottom-section">
+                <a>
+                    <img class="channel-icon"  src={{video.channelIcon}} />
+                </a>
+                <div class="video-details">
+                    <a class="video-title">{{video.title}}</a>
+                    <a class="video-channel-name">{{video.channelName}}</a>
+                    <div class="video-metadata">
+                        <span>{{video.views}}</span>
+                        •
+                        <span>{{video.publishedDate}}</span>
+                    </div>
+                </div>
+            </div>
+        </article> 
+    </mat-grid-tile>  
+  </mat-grid-list>
+  <mat-grid-list [cols]="breakpoint"  fxLayoutGap="5px" fxLayout="row" fxLayoutAlign="space-around stretch" class="video-section" (window:resize)="onResize($event)">
+    <mat-grid-tile *ngFor="let video of videos" fxLayoutGap="5px" gdAlignRows="start stretch">
+        <article  class="video-container">
+            <a class="thumbnail" data-duration="33:12">
+                <img class="thumbnail-image" src={{video.thumbnail}} />
+            </a>
+            <div class="video-bottom-section">
+                <a>
+                    <img class="channel-icon"  src={{video.channelIcon}} />
+                </a>
+                <div class="video-details">
+                    <a class="video-title">{{video.title}}</a>
+                    <a class="video-channel-name">{{video.channelName}}</a>
+                    <div class="video-metadata">
+                        <span>{{video.views}}</span>
+                        •
+                        <span>{{video.publishedDate}}</span>
+                    </div>
+                </div>
+            </div>
+        </article> 
+    </mat-grid-tile>  
+  </mat-grid-list>

@@ -1,0 +1,27 @@
+<button mat-icon-button class="all-app-btn" aria-label="Example icon button with a apps icon" [matMenuTriggerFor]="menu">
+    <mat-icon>apps</mat-icon>
+</button>
+<mat-menu #menu="matMenu" xPosition="before">
+    <button mat-menu-item>
+        <mat-icon color="warn">ondemand_video</mat-icon>
+        VideoApp TV
+    </button>
+    <hr>
+    <button mat-menu-item>
+        <mat-icon color="warn">play_circle_outline</mat-icon>
+        VideoApp Music
+    </button>
+    <button mat-menu-item>
+        <mat-icon color="warn">live_tv</mat-icon>
+        VideoApp Kids
+    </button>
+    <hr>
+    <button mat-menu-item>
+        <mat-icon color="warn">smart_display</mat-icon>
+        Creator Academy
+    </button>
+    <button mat-menu-item>
+        <mat-icon color="warn">smart_display</mat-icon>
+        VideoApp for Artist
+    </button>
+</mat-menu>

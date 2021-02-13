@@ -1,0 +1,18 @@
+.notificationMenu{
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+}
+.notificationName{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.settingsButton{
+    margin-left: 100px;
+}
+
+@media screen and (max-width: 991px) {
+    .notification-btn{
+      display: none;
+    }
+  }

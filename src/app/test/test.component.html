@@ -1,0 +1,20 @@
+<div class="footer" fxHide.xl fxHide.md fxHide.lg fxHide.sm >
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+        <a routerLink="/home" class="sideiconActive" (click)="onHome()">
+            <mat-icon class="iconActive" aria-hidden="false" aria-label="Example of home icon" [style.color]=" homeStatus ? 'red': 'black'">home</mat-icon>
+        </a>
+        <a  routerLink="/trending" class="sideiconDeactive" (click)="onTrending()">
+            <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon" [style.color]=" trendingStatus ? 'red': 'black'">local_fire_department
+            </mat-icon>
+        </a>
+        <a routerLink="/subcriptions" class="sideiconDeactive" (click)="onSubcription()">
+            <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon" [style.color]=" subcriptionStatus ? 'red': 'black'">subscriptions</mat-icon>
+        </a>
+        <a routerLink="/subcriptions" class="sideiconDeactive" (click)="onNotifications()">
+            <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon" [style.color]=" notificationStatus ? 'red': 'black'">notifications</mat-icon>
+        </a>
+        <a routerLink="/subcriptions" class="sideiconDeactive" (click)="onLibrary()">
+            <mat-icon class="iconDeactive" aria-hidden="false" aria-label="Example of home icon" [style.color]=" libraryStatus ? 'red': 'black'">video_library</mat-icon>
+        </a>
+    </div>
+</div>

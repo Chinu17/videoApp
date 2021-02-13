@@ -1,0 +1,13 @@
+<button mat-icon-button class="create-btn" aria-label="Example icon button with a video_call icon" [matMenuTriggerFor]="menu">
+    <mat-icon>video_call</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>
+        <mat-icon color="warn">slideshow</mat-icon>
+        Upload Video
+    </button>
+    <button mat-menu-item>
+        <mat-icon color="warn">sensors</mat-icon>
+        Go Live
+    </button>
+</mat-menu>

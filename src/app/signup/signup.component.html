@@ -1,0 +1,60 @@
+<a [matMenuTriggerFor]="menu" class="channel-icon-tag">
+    <img src="http://unsplash.it/36/36?gravity=center" alt="Your Channel" class="menu-channel-icon">
+</a>
+<mat-menu #menu="matMenu" xPosition="before">
+    <div class="menuSignUp">
+        <div class="signUpName">
+            <mat-icon class="signUpIcon">account_circle</mat-icon>
+            <p class="signUpEmailAddress">
+                Full Name<br>
+                Email Address
+            </p>
+        </div>
+        <hr>
+        <button mat-menu-item>
+            <mat-icon>account_box</mat-icon>
+            Create Your Channel
+        </button>
+        <button mat-menu-item>
+            <mat-icon>monetization_on</mat-icon>
+            Purchases and Memberships
+        </button>
+        <button mat-menu-item>
+            <mat-icon>play_circle</mat-icon>
+            VideoApp Studio
+        </button>
+        <button mat-menu-item>
+            <mat-icon>logout</mat-icon>
+            Sign Out
+        </button>
+        <hr>
+        <button mat-menu-item>
+            <mat-icon>brightness_4</mat-icon>
+            Appearance : Default
+        </button>
+        <button mat-menu-item>
+            <mat-icon>language</mat-icon>
+            Location : India
+        </button>
+        <button mat-menu-item>
+            <mat-icon>settings</mat-icon>
+            Settings
+        </button>
+        <button mat-menu-item>
+            <mat-icon>admin_panel_settings</mat-icon>
+            Your data in VideoAPP
+        </button>
+        <button mat-menu-item>
+            <mat-icon>help</mat-icon>
+            Help
+        </button>
+        <button mat-menu-item>
+            <mat-icon>sms_failed</mat-icon>
+            Send Feedback
+        </button>
+        <button mat-menu-item>
+            <mat-icon>keyboard</mat-icon>
+            keyboard Shortcuts
+        </button>
+    </div>
+</mat-menu>
