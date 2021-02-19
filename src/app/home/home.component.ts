@@ -18,6 +18,8 @@ export class HomeComponent implements OnInit {
     {id: 8, channelName: 'Channel Name 8', title: 'Video Title 8', views: '79K views', publishedDate: '3 week ago', thumbnail: 'http://unsplash.it/250/150?gravity=center', channelIcon: 'http://unsplash.it/36/36?gravity=center'}
   ];
 
+  heelo = 'abc';
+
   breakpoint: number = 0;
 
   constructor() { }
