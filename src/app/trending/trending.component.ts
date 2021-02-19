@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrendingComponent implements OnInit {
 
+  abb: string ='';
+
   constructor() { }
 
   ngOnInit(): void {
